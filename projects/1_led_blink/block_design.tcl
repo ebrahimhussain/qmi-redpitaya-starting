@@ -21,7 +21,7 @@ create_bd_design system
 # open_bd_design {$bd_path/system.bd}
 
 # Load RedPitaya ports
-source dir/cfg/ports.tcl
+source $dir/cfg/ports.tcl
 
 # Set Path for the custom IP cores
 set_property IP_REPO_PATHS tmp/cores [current_project]
