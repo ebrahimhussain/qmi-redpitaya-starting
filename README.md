@@ -17,6 +17,9 @@ Run source and the project will appear in the specified base_path
 source $base_path/start_project.tcl
 ```
 
+After creating the project in Vivado, take the bitstream on the Red Pitaya and 
+upload it to the FPGA using the following in CLI:
+
 ```verilog
 cat /root/BitstreamName.bit > /dev/xdevcfg
 ```
