@@ -16,4 +16,4 @@ set project_name "1_led_blink"
 #set project_name "5_averager"
 
 
-source projects/$project_name/block_design.tcl
+source dir/projects/$project_name/block_design.tcl
