@@ -10,12 +10,9 @@
 
 #set project_name 1_led_blink
 set part_name xc7z010clg400-1
-set bd_path tmp/$project_name/$project_name.srcs/sources_1/bd/system
-
-
-file delete -force tmp/$project_name
-
-create_project $project_name tmp/$project_name -part $part_name
+set bd_path $base_path/$project_name/$project_name.srcs/sources_1/bd/system
+file delete -force $base_path/$project_name
+create_project $project_name $base_path/$project_name -part $part_name
 
 create_bd_design system
 # open_bd_design {$bd_path/system.bd}
