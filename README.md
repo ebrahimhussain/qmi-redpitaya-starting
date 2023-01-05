@@ -1,28 +1,23 @@
 # redpitaya_guide
-Collections of guides and projects related to testing Red Pitaya
 
-More information at http://antonpotocnik.com/?cat=29
+To use `start_project.tcl`, first set a base path (folder where the downloaded git repository is).
+If you want your base path (places where your project files will be saved), `cfg`, `cores`, etc must be placed there.
+This is done in the default TCL console.
+```verilog
+set base_path C:/Users/ehussain/Desktop/Projects/qmi-redpitaya-starting
+```
 
+Also choose a project name:
+```verilog
+set project_name led_switch_interface
+```
 
-Projects:
+Run source and the project will appear in the specified base_path
+```verilog
+source $base_path/start_project.tcl
+```
 
-	1 LED blink (Installation, Generating Bitstream, uploading to FPGA)
-
-	2 Kinght Rider (Verilog example, modules, parallelism)
-	
-	3 Stopwatch (AXI protocol, communication between FPGA and Linux on the ARM porcessor, GPIO IP core, RTL modules)
-
-	4 Frequency Counter (ADC, DAC, communication between FPGA and Linux on the ARM porcessor)
-	
-	5 Averager (ADC, DAC, Reading Data from FPGA, plotting data on a client machine, IP cores)
-	
-	
-	
-Start a project in Vivado using following steps:
-
-1. Open "make_project.tcl" in an editor and uncomment desired "set project_name ###" line
-
-2. Open Vivado
-
-3. In Vivado's Tcl Console navigate to "redpitaya_guide/" folder and execute "source make_project.tcl"
+```verilog
+cat /root/BitstreamName.bit > /dev/xdevcfg
+```
 
